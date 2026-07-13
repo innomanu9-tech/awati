@@ -459,3 +459,44 @@ forms.forEach((form) => {
     form.reset();
   });
 });
+
+const contactForm = document.querySelector('[data-form="contact"]');
+const formMessage = document.querySelector('.form-message');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const button = contactForm.querySelector('button');
+        button.textContent = "Sending...";
+        button.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                formMessage.textContent = "✅ Message delivered successfully!";
+                formMessage.style.color = "green";
+                contactForm.reset();
+            } else {
+                formMessage.textContent = "❌ Something went wrong. Try again.";
+                formMessage.style.color = "red";
+            }
+
+        } catch (error) {
+            formMessage.textContent = "❌ Network error. Please try again.";
+            formMessage.style.color = "red";
+        }
+
+        button.textContent = "Send message";
+        button.disabled = false;
+    });
+}
