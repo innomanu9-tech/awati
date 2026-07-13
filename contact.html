@@ -92,29 +92,40 @@
       <section class="section">
         <div class="container contact-layout">
           
-          <form class="panel-card contact-form" data-form="contact" action="https://formspree.io/f/xeeyqgkd" method="POST">
-            <h2>Send a message</h2>
-            <div class="form-row">
-              <label for="name">Full name</label>
-              <input id="name" name="name" type="text" required />
-            </div>
-            <div class="form-row">
-              <label for="email">Email address</label>
-              <input id="email" name="email" type="email" required />
-            </div>
-            <div class="form-row">
-              <label for="subject">Subject</label>
-              <input id="subject" name="subject" type="text" required />
-            </div>
-            <div class="form-row">
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-              <p class="form-message" aria-live="polite"></p>
-            <button class="btn btn-primary" type="submit">Send message</button>
-          
-            
-          </form>
+         <form class="panel-card contact-form" data-form="contact" action="https://formspree.io/f/xeeyqgkd" method="POST">
+
+    <h2>Send a message</h2>
+
+    <div class="form-row">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+    </div>
+
+    <div class="form-row">
+        <label for="email">Email address</label>
+        <input id="email" name="_replyto" type="email" required>
+    </div>
+
+    <div class="form-row">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required>
+    </div>
+
+    <div class="form-row">
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+    </div>
+
+    <!-- Formspree settings -->
+    <input type="hidden" name="_subject" value="New message from Awati website">
+
+    <p class="form-message" aria-live="polite"></p>
+
+    <button class="btn btn-primary" type="submit">
+        Send message
+    </button>
+
+</form>
 
           <div class="panel-card contact-details">
             <h2>Connect with us</h2>
