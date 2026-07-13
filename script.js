@@ -464,35 +464,45 @@ const contactForm = document.querySelector('[data-form="contact"]');
 const formMessage = document.querySelector('.form-message');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const button = contactForm.querySelector('button');
+        const button = contactForm.querySelector('button[type="submit"]');
+
         button.textContent = "Sending...";
         button.disabled = true;
-
-        const formData = new FormData(contactForm);
 
         try {
             const response = await fetch(contactForm.action, {
                 method: "POST",
-                body: formData,
+                body: new FormData(contactForm),
                 headers: {
-                    "Accept": "application/json"
+                    Accept: "application/json"
                 }
             });
+
+            const data = await response.json();
 
             if (response.ok) {
                 formMessage.textContent = "✅ Message delivered successfully!";
                 formMessage.style.color = "green";
                 contactForm.reset();
             } else {
-                formMessage.textContent = "❌ Something went wrong. Try again.";
+                console.error("Formspree error:", data);
+
+                formMessage.textContent =
+                    data.errors?.map(error => error.message).join(", ")
+                    || "❌ Form submission failed.";
+
                 formMessage.style.color = "red";
             }
 
         } catch (error) {
-            formMessage.textContent = "❌ Network error. Please try again.";
+            console.error(error);
+
+            formMessage.textContent =
+                "❌ Network error. Please try again.";
+
             formMessage.style.color = "red";
         }
 
