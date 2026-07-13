@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | AWATI</title>
+    <meta name="description" content="Explore AWATI project photography, with filters for training, farming, youth, climate, and events." />
+    <meta property="og:title" content="Gallery | AWATI" />
+    <meta property="og:description" content="Browse hundreds of AWATI project photos with lightbox viewing and category filters." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://awati.org/gallery.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="AWATI home">
+          <img class="brand-logo" src="assets/images/logo.jpg" alt="AWATI logo" />
+          <span class="brand-text">AWATI</span>
+        </a>
+        <div class="lang-switch">
+          <label class="sr-only" for="language-select">Select language</label>
+          <select id="language-select" name="language" aria-label="Language selection">
+            <option value="en">English</option>
+            <option value="sw">Swahili</option>
+            <option value="lg">Luganda</option>
+          </select>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <div class="nav-item nav-item--dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">About <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i></button>
+            <div class="nav-dropdown" role="menu" aria-label="About quick links">
+              <a class="nav-dropdown-link" href="about.html" role="menuitem">About us</a>
+              <a class="nav-dropdown-link" href="team.html" role="menuitem">Our Team</a>
+              <a class="nav-dropdown-link" href="about.html#mission" role="menuitem">Mission</a>
+              <a class="nav-dropdown-link" href="about.html#vision" role="menuitem">Vision</a>
+              <a class="nav-dropdown-link" href="about.html#objective" role="menuitem">Objective</a>
+            </div>
+          </div>
+          <div class="nav-item nav-item--dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Our work <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i></button>
+            <div class="nav-dropdown" role="menu" aria-label="Our work quick links">
+              <a class="nav-dropdown-link" href="news.html" role="menuitem">News</a>
+              <a class="nav-dropdown-link" href="gallery.html" role="menuitem">Gallery</a>
+              <a class="nav-dropdown-link" href="stories.html" role="menuitem">Stories</a>
+              <a class="nav-dropdown-link" href="volunteer.html" role="menuitem">Volunteer</a>
+            </div>
+          </div>
+          <a class="nav-link" href="programs.html">Programs</a>
+          <a class="nav-link" href="impact.html">Impact</a>
+          <a class="nav-link" href="events.html">Events</a>
+          <button class="search-toggle nav-link" type="button" aria-label="Search site">Search</button>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <a class="nav-link nav-link--donate" href="donate.html">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero hero-inner hero-gallery">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-copy narrow">
+            <p class="eyebrow">Gallery</p>
+            <h1>Project photography that brings AWATI’s work to life.</h1>
+            <p>Filter photos by training, farming, youth, climate, and events, then click to enlarge each image.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="container">
+          <div class="filter-row" role="toolbar" aria-label="Gallery filters">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="training">Training</button>
+            <button class="filter-button" data-filter="farming">Farming</button>
+            <button class="filter-button" data-filter="youth">Youth</button>
+            <button class="filter-button" data-filter="climate">Climate</button>
+            <button class="filter-button" data-filter="events">Events</button>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-card" data-category="training" tabindex="0" aria-label="Training photo">
+              <img src="images/gallery/gallery-1.svg" alt="Training session group" loading="lazy" />
+              <div class="gallery-caption"><span>Training</span></div>
+            </article>
+            <article class="gallery-card" data-category="farming" tabindex="0" aria-label="Farming photo">
+              <img src="images/gallery/gallery-2.svg" alt="Field farming activity" loading="lazy" />
+              <div class="gallery-caption"><span>Farming</span></div>
+            </article>
+            <article class="gallery-card" data-category="youth" tabindex="0" aria-label="Youth agriculture photo">
+              <img src="images/gallery/gallery-3.svg" alt="Youth innovation workshop" loading="lazy" />
+              <div class="gallery-caption"><span>Youth</span></div>
+            </article>
+            <article class="gallery-card" data-category="climate" tabindex="0" aria-label="Climate smart agriculture photo">
+              <img src="images/gallery/gallery-4.svg" alt="Climate-smart agriculture" loading="lazy" />
+              <div class="gallery-caption"><span>Climate</span></div>
+            </article>
+            <article class="gallery-card" data-category="events" tabindex="0" aria-label="Community events photo">
+              <img src="images/gallery/gallery-5.svg" alt="Community event gathering" loading="lazy" />
+              <div class="gallery-caption"><span>Events</span></div>
+            </article>
+            <article class="gallery-card" data-category="training" tabindex="0" aria-label="Training story photo">
+              <img src="images/gallery/gallery-1.svg" alt="Field training session" loading="lazy" />
+              <div class="gallery-caption"><span>Training</span></div>
+            </article>
+            <article class="gallery-card" data-category="farming" tabindex="0" aria-label="Farm harvest photo">
+              <img src="images/gallery/gallery-2.svg" alt="Harvesting activity" loading="lazy" />
+              <div class="gallery-caption"><span>Farming</span></div>
+            </article>
+            <article class="gallery-card" data-category="youth" tabindex="0" aria-label="Youth training photo">
+              <img src="images/gallery/gallery-3.svg" alt="Young farmers learning" loading="lazy" />
+              <div class="gallery-caption"><span>Youth</span></div>
+            </article>
+            <article class="gallery-card" data-category="climate" tabindex="0" aria-label="Climate-focused agriculture photo">
+              <img src="images/gallery/gallery-4.svg" alt="Climate-smart planning" loading="lazy" />
+              <div class="gallery-caption"><span>Climate</span></div>
+            </article>
+            <article class="gallery-card" data-category="events" tabindex="0" aria-label="Community meeting photo">
+              <img src="images/gallery/gallery-5.svg" alt="Community meeting" loading="lazy" />
+              <div class="gallery-caption"><span>Events</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="lightbox-overlay" id="lightbox" hidden aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close image view">×</button>
+        <img class="lightbox-image" src="" alt="Expanded gallery item" />
+        <p class="lightbox-meta"></p>
+      </div>
+    </main>
+
+    <a class="floating-whatsapp" href="https://wa.me/233201234567" target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Need Help? Chat with us</span>
+    </a>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark">🌱</span>
+            <span class="brand-text">AWATI</span>
+          </a>
+          <p>See the everyday moments when women, youth, and communities grow through AWATI’s work.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:hello@awati.org">hello@awati.org</a></li>
+            <li><a href="tel:+233201234567">+233 20 123 4567</a></li>
+            <li>Accra, Ghana</li>
+            <li>Mon–Fri, 9am–5pm</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.x.com" target="_blank" rel="noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
